@@ -33,13 +33,7 @@ void fill_disabled(vector<Control>& s) {
 }
 void generate_random_states(vector<Control>& s) {
     vector<string> states = {"visible", "invisible", "disabled"};
-    // random_device rd;
-    // mt19937 gen(rd());
-    // uniform_int_distribution<> dist(0, 2);
-    // for (auto& d : s) {
-    //     d.state = states[dist(gen)];
-    // }
-    srand(time(0));
+  srand(time(0));
     for (auto& d : s) {
         int random_index = rand() % 3;  // Generate a random index (0, 1, or 2)
         d.state = states[random_index];
